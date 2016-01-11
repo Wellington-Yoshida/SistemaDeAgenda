@@ -1,0 +1,106 @@
+﻿@model DotNet.Highcharts.Highcharts
+
+<!--Menu-->
+<div class="ui inverted stackable menu">
+    <div class="item">
+        <a href="~/Home/Index"><img src="~/Content/images/iconAgenda.fw.png"></a>
+    </div>
+    <a href="~/Home/Index" class="item">Home</a>
+    <a href="~/SobreSistema/Index" class="item">Sobre o Sistema</a>
+    <a href="~/Relatorio/Index" class="item active">Relatório</a>
+    <a id="btnModalAjuda" class="item">Ajuda</a>
+
+    @using (Html.BeginForm("Buscar", "Contatoes", FormMethod.Get))
+    {
+        <div id="filtro" class="ui action input">
+            @Html.TextBox("Pesquisa")
+            <button class="mini ui red button" value="Pesquisar">
+                Buscar
+            </button>
+        </div>
+    }
+
+</div>
+
+<h2>&nbsp; Relatório</h2>
+
+<div id="relatorioAccordion" class="ui styled fluid accordion">
+    <div class="title">
+        <i class="dropdown icon"></i>
+        Total de Contatos.
+    </div>
+    <div class="content">
+        <div class="ui statistic">
+            <div class="value">
+                @ViewBag.Resultado
+            </div>
+            <div class="label">
+                Total de Contatos Cadastrados.
+            </div>
+        </div>
+    </div>
+    <div class="title">
+        <i class="dropdown icon"></i>
+        Total de Contato Feminino
+    </div>
+    <div class="content">
+        <div class="content">
+            <div class="ui statistic">
+                <div class="value">
+                    @ViewBag.Feminino
+                </div>
+                <div class="label">
+                    Total de Contato Feminino Cadastrado.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="title">
+        <i class="dropdown icon"></i>
+        Total de Contato Masculino
+    </div>
+    <div class="content">
+        <div class="content">
+            <div class="ui statistic">
+                <div class="value">
+                    @ViewBag.Masculino
+                </div>
+                <div class="label">
+                    Total de Contato Masculino Cadastrado.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="title">
+        <i class="dropdown icon"></i>
+        Gráfico
+    </div>
+    <div class="content">
+        <div class="content">
+            <div class="ui statistic">
+                <div class="value">
+                    @((DotNet.Highcharts.Highcharts)ViewBag.grafico)
+                </div>
+                <div class="label">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Modal Ajuda-->
+
+<div class="ui large modal">
+    <div class="header">Ajuda</div>
+    <div class="content">
+        <p>° Cadastre seus contatos</p>
+        <p>° Quando editar seus contato é necessário que insira novamente uma foto do contato</p>
+        <p>° O sistema tem validação no número de  celular que não permite que mais de um contato tenha o mesmo número de celular</p>
+    </div>
+    <div class=" actions">
+        <div class="ui red cancel button">
+            Fechar
+        </div>
+    </div>
+</div>

@@ -1,0 +1,86 @@
+﻿
+<!--Menu-->
+<div class="ui inverted stackable menu">
+    <div class="item">
+        <a href="~/Home/Index"><img src="~/Content/images/iconAgenda.fw.png"></a>
+    </div>
+    <a class="item active">Home</a>
+    <a href="~/SobreSistema/Index" class="item">Sobre o Sistema</a>
+    <a href="~/Relatorio/Index" class="item">Relatório</a>
+    <a id="btnModalAjuda" class="item">Ajuda</a>
+
+    @using (Html.BeginForm("Buscar", "Contatoes", FormMethod.Get))
+    {
+        <div id="filtro" class="ui action input">
+            @Html.TextBox("Pesquisa")
+            <button class="mini ui red button" value="Pesquisar">
+                Buscar
+            </button>
+        </div>
+    }
+
+</div>
+
+<!--Cards-->
+<div id="cardsHome" class="ui special cards">
+    <div class="card">
+        <div class="blurring dimmable image">
+            <div class="ui dimmer">
+                <div class="content">
+                    <div class="center">
+                        <a href="~/Contatoes/Create"><div class="ui inverted button">Add Contato</div></a>
+                    </div>
+                </div>
+            </div>
+            <img src="~/Content/images/jenny.jpg">
+        </div>
+        <div class="content">
+            <a class="header">Adicionar Novo Contato</a>
+            <div class="meta">
+                <span class="date">Add</span>
+            </div>
+        </div>
+        <div class="extra content">
+           
+
+        </div>
+    </div>
+    <div class="card">
+        <div class="blurring dimmable image">
+            <div class="ui inverted dimmer">
+                <div class="content">
+                    <div class="center">
+                        <a href="~/Contatoes/Index"><div class="ui primary button">Ver Todos Contato</div></a>
+                    </div>
+                </div>
+            </div>
+            <img src="~/Content/images/steve.jpg">
+        </div>
+        <div class="content">
+            <a class="header">Todos os Contatos</a>
+            <div class="meta">
+                <span class="date">Lista</span>
+            </div>
+        </div>
+        <div class="extra content">
+           
+
+        </div>
+    </div>
+</div>
+
+<!--Modal Ajuda-->
+
+<div class="ui large modal">
+    <div class="header">Ajuda</div>
+    <div class="content">
+        <p>° Cadastre seus contatos</p>
+        <p>° Quando editar seus contato é necessário que insira novamente uma foto do contato</p>
+        <p>° O sistema tem validação no número de  celular que não permite que mais de um contato tenha o mesmo número de celular</p>
+    </div>
+    <div class=" actions">
+        <div class="ui red cancel button">
+            Fechar
+        </div>
+    </div>
+</div>

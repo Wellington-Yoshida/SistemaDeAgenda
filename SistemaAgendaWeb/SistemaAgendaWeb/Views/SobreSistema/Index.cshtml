@@ -1,0 +1,58 @@
+﻿<!--Menu-->
+<div class="ui inverted stackable menu">
+    <div class="item">
+        <a href="~/Home/Index"><img src="~/Content/images/iconAgenda.fw.png"></a>
+    </div>
+    <a href="~/Home/Index" class="item">Home</a>
+    <a class="item active">Sobre o Sistema</a>
+    <a href="~/Relatorio/Index" class="item">Relatório</a>
+    <a id="btnModalAjuda" class="item">Ajuda</a>
+
+    @using (Html.BeginForm("Buscar", "Contatoes", FormMethod.Get))
+    {
+        <div id="filtro" class="ui action input">
+            @Html.TextBox("Pesquisa")
+            <button class="mini ui red button" value="Pesquisar">
+                Buscar
+            </button>
+        </div>
+    }
+
+</div>
+<br />
+
+<h2>&nbsp; Sobre o Sistema &nbsp; <font size="6" face="Star Jedi"> Agendas-issami </font></h2>
+
+<hr />
+
+<p>
+    <img id="imgSobreSistema" src="~/Content/images/iconContato.fw.png" data-title="Agendas-issami" data-content="Ajudando você ficar mais organizado com seus contatos" class="ui Large circular image" />
+</p>
+
+
+<div class="ui raised very padded text container segment">
+    <h2 class="ui header"><font size="5" face="Star Jedi"> Agendas-issami </font></h2>
+    <p>
+        O sistema <font size="3" face="Star Jedi"> Agendas-issami </font> é um jeito fácil e pratico de organizar seus contatos de amizades, colegas de trabalho, familiares, e contato de negócios.
+        Com a possibilidade de cadastrar os contatos com informações como nome, sobrenome, telefone fixo, celular, e-mail, sexo, e foto.
+    </p>
+</div>
+
+<!--Modal Ajuda-->
+
+<div class="ui large modal">
+    <div class="header">Ajuda</div>
+    <div class="content">
+        <p>° Cadastre seus contatos</p>
+        <p>° Quando editar seus contato é necessário que insira novamente uma foto do contato</p>
+        <p>° O sistema tem validação no número de  celular que não permite que mais de um contato tenha o mesmo número de celular</p>
+    </div>
+    <div class=" actions">
+        <div class="ui red cancel button">
+            Fechar
+        </div>
+    </div>
+</div>
+
+
+

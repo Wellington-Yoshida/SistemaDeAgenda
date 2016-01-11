@@ -1,0 +1,65 @@
+﻿@using PagedList.Mvc;
+@model PagedList.IPagedList<SistemaAgendaDominio.Contato>
+@{
+    ViewBag.Title = "Resultado da Busca";
+}
+
+<!--Menu-->
+<div class="ui inverted stackable menu">
+    <div class="item">
+        <a href="~/Home/Index"><img src="~/Content/images/iconAgenda.fw.png"></a>
+    </div>
+    <a href="~/Home/Index" class="item">Home</a>
+    <a href="~/SobreSistema/Index" class="item">Sobre o Sistema</a>
+    <a href="~/Relatorio/Index" class="item">Relatório</a>
+    <a id="btnModalAjuda" class="item">Ajuda</a>
+    @using (Html.BeginForm("Buscar", "Contatoes", FormMethod.Get))
+    {
+        <div id="filtro" class="ui action input">
+            @Html.TextBox("Pesquisa")
+            <button class="mini ui red button" value="Pesquisar">
+                Buscar
+            </button>
+        </div>
+    }
+
+
+</div>
+
+<h2>&nbsp; Resultado da Busca</h2>
+
+<!--Laço de repetição para os cards que estão na View CatalagoContato-->
+<div id="cardsContato">
+    @foreach (var item in Model)
+    {
+        <div class="ui label">
+            <div class="inline">@Html.Partial("CatalogoContato", item)</div>
+        </div>
+    }
+</div>
+
+<!--Paginação-->
+<p id="marcacaoPagina">Pagina @Model.PageNumber de @Model.PageCount</p>
+<div>
+    <dl class="dl-horizontal">
+        @Html.PagedListPager(Model, pagina => Url.Action("Buscar", new { pagina }))
+    </dl>
+
+</div>
+
+<!--Modal Ajuda-->
+
+<div class="ui large modal">
+    <div class="header">Ajuda</div>
+    <div class="content">
+        <p>° Cadastre seus contatos</p>
+        <p>° Quando editar seus contato é necessário que insira novamente uma foto do contato</p>
+        <p>° O sistema tem validação no número de  celular que não permite que mais de um contato tenha o mesmo número de celular</p>
+    </div>
+    <div class=" actions">
+        <div class="ui red cancel button">
+            Fechar
+        </div>
+    </div>
+</div>
+

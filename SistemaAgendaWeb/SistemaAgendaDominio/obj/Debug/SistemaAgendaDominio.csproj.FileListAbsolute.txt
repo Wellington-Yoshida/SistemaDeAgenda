@@ -1,0 +1,14 @@
+C:\Users\Administrador\Desktop\SistemaAgenda\SistemaAgendaWeb\SistemaAgendaDominio\bin\Debug\SistemaAgendaDominio.dll.config
+C:\Users\Administrador\Desktop\SistemaAgenda\SistemaAgendaWeb\SistemaAgendaDominio\bin\Debug\SistemaAgendaDominio.dll
+C:\Users\Administrador\Desktop\SistemaAgenda\SistemaAgendaWeb\SistemaAgendaDominio\bin\Debug\SistemaAgendaDominio.pdb
+C:\Users\Administrador\Desktop\SistemaAgenda\SistemaAgendaWeb\SistemaAgendaDominio\bin\Debug\EntityFramework.dll
+C:\Users\Administrador\Desktop\SistemaAgenda\SistemaAgendaWeb\SistemaAgendaDominio\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Administrador\Desktop\SistemaAgenda\SistemaAgendaWeb\SistemaAgendaDominio\bin\Debug\PagedList.dll
+C:\Users\Administrador\Desktop\SistemaAgenda\SistemaAgendaWeb\SistemaAgendaDominio\bin\Debug\PagedList.Mvc.dll
+C:\Users\Administrador\Desktop\SistemaAgenda\SistemaAgendaWeb\SistemaAgendaDominio\bin\Debug\EntityFramework.xml
+C:\Users\Administrador\Desktop\SistemaAgenda\SistemaAgendaWeb\SistemaAgendaDominio\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Administrador\Desktop\SistemaAgenda\SistemaAgendaWeb\SistemaAgendaDominio\bin\Debug\PagedList.xml
+C:\Users\Administrador\Desktop\SistemaAgenda\SistemaAgendaWeb\SistemaAgendaDominio\bin\Debug\PagedList.Mvc.xml
+C:\Users\Administrador\Desktop\SistemaAgenda\SistemaAgendaWeb\SistemaAgendaDominio\obj\Debug\SistemaAgendaDominio.csprojResolveAssemblyReference.cache
+C:\Users\Administrador\Desktop\SistemaAgenda\SistemaAgendaWeb\SistemaAgendaDominio\obj\Debug\SistemaAgendaDominio.dll
+C:\Users\Administrador\Desktop\SistemaAgenda\SistemaAgendaWeb\SistemaAgendaDominio\obj\Debug\SistemaAgendaDominio.pdb

@@ -1,0 +1,136 @@
+﻿@model SistemaAgendaDominio.Contato
+
+<!--Menu-->
+<div class="ui inverted stackable menu">
+    <div class="item">
+        <a href="~/Home/Index"><img src="~/Content/images/iconAgenda.fw.png"></a>
+    </div>
+    <a href="~/Home/Index" class="item">Home</a>
+    <a href="~/SobreSistema/Index" class="item">Sobre o Sistema</a>
+    <a href="~/Relatorio/Index" class="item">Relatório</a>
+    <a id="btnModalAjuda" class="item">Ajuda</a>
+
+    @using (Html.BeginForm("Buscar", "Contatoes", FormMethod.Get))
+    {
+        <div id="filtro" class="ui action input">
+            @Html.TextBox("Pesquisa")
+            <button class="mini ui red button" value="Pesquisar">
+                Buscar
+            </button>
+        </div>
+    }
+
+</div>
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2 class="Titulo">Detalhes</h2>
+
+<div>
+    <h4 class="Titulo">Contato</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayName("Sexo")
+        </dt>
+
+        <dd class="ui visible teal message">
+            @if (Model.Masculino == true)
+            {
+                @Html.Label("Masculino");
+            }
+            else
+            {
+                @Html.Label("Feminino");
+            }
+
+
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd class="ui visible teal message">
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sobrenome)
+        </dt>
+
+        <dd class="ui visible teal message">
+            @Html.DisplayFor(model => model.Sobrenome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TelefoneFixo)
+        </dt>
+
+        <dd class="ui visible teal message">
+            @Html.DisplayFor(model => model.TelefoneFixo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Celular)
+        </dt>
+
+        <dd class="ui visible teal message">
+            @Html.DisplayFor(model => model.Celular)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd class="ui visible teal message">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Imagem)
+        </dt>
+
+        <dd class="ui visible teal message">
+            @if (Model.Imagem != null)
+            {
+                <div class="image">
+                    <img id="imgCards" src="@Url.Action("ExibirImagem", "Arquivo", new { id = Model.ContatoId })" />
+                </div>
+            }
+            else
+            {
+                <div class="image">
+                    <img id="imgSemFoto" src="~/Content/images/molly.png" />
+                </div>
+            }
+        </dd>
+
+       
+
+    </dl>
+</div>
+<p class="editar">
+    
+    <a href="~/Contatoes/Edit/@Model.ContatoId" title="Editar" class="ui inverted violet button">Editar</a>
+    <a href="~/Contatoes/Index" title="Voltar" class="ui inverted red button">Voltar</a>
+</p>
+
+<!--Modal Ajuda-->
+
+<div class="ui large modal">
+    <div class="header">Ajuda</div>
+    <div class="content">
+        <p>° Cadastre seus contatos</p>
+        <p>° Quando editar seus contato é necessário que insira novamente uma foto do contato</p>
+        <p>° O sistema tem validação no número de  celular que não permite que mais de um contato tenha o mesmo número de celular</p>
+    </div>
+    <div class=" actions">
+        <div class="ui red cancel button">
+            Fechar
+        </div>
+    </div>
+</div>

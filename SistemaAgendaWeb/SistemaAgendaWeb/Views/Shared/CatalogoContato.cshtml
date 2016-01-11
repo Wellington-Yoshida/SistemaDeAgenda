@@ -1,0 +1,36 @@
+﻿@model SistemaAgendaDominio.Contato
+@{
+    ViewBag.Title = "CatalogoContato";
+}
+
+<!--Cards para a lista de contatos-->
+<div class="ui centered card">
+
+    
+    @if (Model.Imagem != null)
+    {
+        <div class="image">
+            <img id="imgCards" src="@Url.Action("ExibirImagem", "Arquivo", new { id = Model.ContatoId })" />
+        </div>
+    }
+    else
+    {
+        <div class="image">
+            <img id="imgSemFoto" src="~/Content/images/semFoto.jpg" />
+        </div>
+    }
+
+    <div class="content">
+        <h3>@Model.Nome @Model.Sobrenome</h3>
+    </div>
+    <div class="description">
+        <h4>@Model.Celular</h4>
+        <h4>@Model.Email</h4>
+    </div>
+    <div class="ui tree buttons">
+        <a href="~/Contatoes/Edit/@Model.ContatoId" class="ui basic green button">Editar</a>
+        <a href="~/Contatoes/Details/@Model.ContatoId" class="ui basic blue button">Detalhes</a>
+        <a href="~/Contatoes/Delete/@Model.ContatoId" class="ui basic red button">Deletar</a>
+    </div>
+</div>
+

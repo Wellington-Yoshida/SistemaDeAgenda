@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/Highcharts-4.0.1/js/highcharts.js"></script>
+    <script type="text/javascript" src="~/Scripts/Highcharts-4.0.1/js/modules/exporting.js"></script>
+</head>
+<body>
+    @RenderBody()
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/semantic")
+    @RenderSection("scripts", required: false)
+    <script src="~/Scripts/SistemaAgendaScripts.js"></script>
+    <script src="~/Scripts/jquery.maskedinput.min.js"></script>
+    <link href="~/Content/SistemaAgendaCSS.css" rel="stylesheet" />
+    <link href="~/Content/PagedList.css" rel="stylesheet" />
+    
+    
+    <footer id="rodaPe">
+        <hr />
+        <p>&copy; @DateTime.Now.Year <strong>- Sistema de Agenda - Wellington Issami Yoshida &nbsp; </strong> <a title="FaceBook" href="https://www.facebook.com/wellington.yoshida" target="_blank"><img src="~/Content/images/iconFace.fw.png" />
+            </a> &nbsp; <a title="Instagram" href="https://www.instagram.com/wellington_yoshida/" target="_blank"><img src="~/Content/images/iconInstagram.fw.png" /></a> &nbsp; 
+            <a title="Twitter" href="https://twitter.com/Issami1000" target="_blank"><img src="~/Content/images/iconTwitter.fw.png" /></a> &nbsp; 
+            <a title="Google+" href="https://plus.google.com/u/0/117056778609514942633/posts" target="_blank"><img src="~/Content/images/iconGooglePlus.fw.png" /></a>
+        </p> 
+    </footer>
+</body>
+</html>

@@ -1,0 +1,105 @@
+﻿body {
+}
+
+#cardsHome{
+    position: relative;
+    margin: 0 auto;
+    width: 40%;
+}
+
+#cardsContato{
+    position: relative;
+    margin: 0 auto;
+    width: 80%;
+    margin-top: 30px;
+}
+
+#rodaPe p{
+    position: relative;
+    margin: 0 auto;
+    width: 40%;
+}
+
+#rodaPe hr{
+    margin-top: 90px;
+}
+
+#rodaPe {
+   width: auto;
+   height: 215px;
+   background: #808080;
+}
+
+.form-group{
+  
+    padding: 15px;
+}
+
+#linkVoltar{
+    margin-left: 20px;
+}
+
+.dl-horizontal {
+    margin-left: 25px;
+    margin-right: 80px;
+}
+
+.editar{
+    margin-left: 25px;
+}
+
+#btnsalvar{
+    margin-left: 11px;
+}
+
+.btnAdd {
+    margin-left: 30px;
+}
+
+#tabela{
+    padding: 5px;
+}
+
+#todosContatos{
+    margin-left: 25px;
+}
+
+#btnsalvarCreate{
+    margin-left: 6px;
+}
+
+.Titulo{
+    margin-left: 25px;
+}
+
+#imgCards {
+    width: 290px;
+    height: 290px;
+}
+
+#imgSemFoto{
+    width: 290px;
+    height: 290px;
+}
+
+#filtro{
+    position:absolute;
+	top:0;
+	right:5px;
+    top: 5px;
+}
+
+#iconCancelar{
+    margin-top: 10px;
+}
+
+#imgSobreSistema{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+
+
+
