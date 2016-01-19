@@ -25,7 +25,14 @@
     </div>
     <div class="description">
         <h4>@Model.Celular</h4>
-        <h4>@Model.Email</h4>
+        @if (!String.IsNullOrEmpty(Model.Email))
+        {
+            <h4>@Model.Email</h4>
+        }
+        else
+        {
+            <div id="semEmail">@Html.Label("E-mail: não cadastrado")</div>
+        }
     </div>
     <div class="ui tree buttons">
         <a href="~/Contatoes/Edit/@Model.ContatoId" class="ui basic green button">Editar</a>
